@@ -1,0 +1,468 @@
+Method: GET 
+                   Url: /api/v1/blocks/19740345 
+                   Date: 2024-04-27 
+                   Time: 18:18:03
+                   Success: false - 
+                   Message: can not find block_height 19740345
+Method: GET 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-03 
+                   Time: 16:50:13
+                   Success: false - 
+                   Message: can not find resurs /api/v1/blockchain/mine
+Method: GET 
+                   Url: /api/v1/blockchain%20 
+                   Date: 2024-05-03 
+                   Time: 16:50:28
+                   Success: false - 
+                   Message: can not find resurs /api/v1/blockchain%20
+Method: GET 
+                   Url: /blockchain 
+                   Date: 2024-05-03 
+                   Time: 16:54:14
+                   Success: false - 
+                   Message: can not find resurs /blockchain
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-03 
+                   Time: 16:57:59
+                   Success: undefined - 
+                   Message: blockchain is not defined
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-03 
+                   Time: 17:00:07
+                   Success: undefined - 
+                   Message: blockchain is not defined
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-03 
+                   Time: 17:03:38
+                   Success: undefined - 
+                   Message: body is not defined
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-03 
+                   Time: 17:15:00
+                   Success: undefined - 
+                   Message: data is not defined
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-03 
+                   Time: 17:22:19
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'length')
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 13:13:07
+                   Success: undefined - 
+                   Message: timestamp is not defined
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 13:19:46
+                   Success: undefined - 
+                   Message: stringToHash is not defined
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 13:20:19
+                   Success: undefined - 
+                   Message: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 15:32:35
+                   Success: undefined - 
+                   Message: Cannot access 'timestamp' before initialization
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 15:35:40
+                   Success: undefined - 
+                   Message: Cannot access 'timestamp' before initialization
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 15:36:35
+                   Success: undefined - 
+                   Message: Cannot access 'timestamp' before initialization
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 15:37:02
+                   Success: undefined - 
+                   Message: Cannot access 'data' before initialization
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 15:38:46
+                   Success: undefined - 
+                   Message: Cannot access 'data' before initialization
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 15:39:23
+                   Success: undefined - 
+                   Message: Cannot access 'data' before initialization
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 15:40:45
+                   Success: undefined - 
+                   Message: Cannot access 'data' before initialization
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 15:41:02
+                   Success: undefined - 
+                   Message: Cannot access 'data' before initialization
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-04 
+                   Time: 15:41:26
+                   Success: undefined - 
+                   Message: nonce is not defined
+Method: GET 
+                   Url: /api/v1/blockchain%20 
+                   Date: 2024-05-05 
+                   Time: 13:16:32
+                   Success: false - 
+                   Message: can not find resurs /api/v1/blockchain%20
+Method: GET 
+                   Url: /api/v1/blockchain%20 
+                   Date: 2024-05-05 
+                   Time: 13:21:23
+                   Success: false - 
+                   Message: can not find resurs /api/v1/blockchain%20
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 13:39:47
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 13:39:51
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 13:39:54
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 13:39:56
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 13:40:44
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 14:05:13
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 14:05:23
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 14:05:25
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 14:05:26
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 14:05:28
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 14:07:47
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 14:07:49
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 14:07:52
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 14:08:44
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 14:28:59
+                   Success: undefined - 
+                   Message: Unexpected end of JSON input
+Method: POST 
+                   Url: /api/v1/blockchain/mine 
+                   Date: 2024-05-05 
+                   Time: 14:29:01
+                   Success: undefined - 
+                   Message: Unexpected end of JSON input
+Method: POST 
+                   Url: /api/v1/blockchain/mine%20 
+                   Date: 2024-05-05 
+                   Time: 15:18:30
+                   Success: false - 
+                   Message: can not find resurs /api/v1/blockchain/mine%20
+Method: POST 
+                   Url: /api/v1/blockchain/mine%20 
+                   Date: 2024-05-05 
+                   Time: 15:20:15
+                   Success: false - 
+                   Message: can not find resurs /api/v1/blockchain/mine%20
+Method: POST 
+                   Url: /api/v1/blockchain/mine%20 
+                   Date: 2024-05-05 
+                   Time: 15:23:27
+                   Success: false - 
+                   Message: undefined
+Method: POST 
+                   Url: /api/v1/bloc%20 
+                   Date: 2024-05-05 
+                   Time: 15:24:10
+                   Success: false - 
+                   Message: undefined
+Method: POST 
+                   Url: /api/v1/blockchain/mine%20 
+                   Date: 2024-05-05 
+                   Time: 15:24:17
+                   Success: false - 
+                   Message: undefined
+Method: GET 
+                   Url: /api/v1/blockchain%20 
+                   Date: 2024-05-05 
+                   Time: 15:24:28
+                   Success: false - 
+                   Message: undefined
+Method: GET 
+                   Url: /api/v1/blockchain/2%20 
+                   Date: 2024-05-05 
+                   Time: 15:24:44
+                   Success: false - 
+                   Message: undefined
+Method: GET 
+                   Url: /api/v1/blockchain/2 
+                   Date: 2024-05-05 
+                   Time: 15:24:52
+                   Success: false - 
+                   Message: undefined
+Method: GET 
+                   Url: /api/v1/blockchain/2 
+                   Date: 2024-05-05 
+                   Time: 15:25:39
+                   Success: false - 
+                   Message: can not find resurs /api/v1/blockchain/2
+Method: GET 
+                   Url: /api/v1/blockchain/2 
+                   Date: 2024-05-05 
+                   Time: 15:25:46
+                   Success: false - 
+                   Message: can not find resurs /api/v1/blockchain/2
+Method: GET 
+                   Url: /api/v1/blockchain/2 
+                   Date: 2024-05-05 
+                   Time: 15:28:45
+                   Success: false - 
+                   Message: undefined
+Method: GET 
+                   Url: /api/v1/blockchain/2%20 
+                   Date: 2024-05-05 
+                   Time: 15:28:48
+                   Success: false - 
+                   Message: undefined
+Method: GET 
+                   Url: /api/v1/blockchain/2%20 
+                   Date: 2024-05-05 
+                   Time: 15:29:52
+                   Success: false - 
+                   Message: undefined
+Method: GET 
+                   Url: /api/v1/blockchain/2%20 
+                   Date: 2024-05-05 
+                   Time: 15:30:40
+                   Success: false - 
+                   Message: undefined
+Method: GET 
+                   Url: /api/v1/blockchain/2%20%20%20 
+                   Date: 2024-05-05 
+                   Time: 15:30:45
+                   Success: false - 
+                   Message: undefined
+Method: GET 
+                   Url: /api/v1/blockchain/2%20%20%20 
+                   Date: 2024-05-05 
+                   Time: 15:31:01
+                   Success: true - 
+                   Message: [object Object]
+Method: GET 
+                   Url: /api/v1/blockchain/2%20%20%20 
+                   Date: 2024-05-05 
+                   Time: 15:31:21
+                   Success: true - 
+                   Message: 404
+Method: GET 
+                   Url: /api/v1/blockchain/2%20%20%20 
+                   Date: 2024-05-05 
+                   Time: 15:31:39
+                   Success: false - 
+                   Message: can not find resurs /api/v1/blockchain/2%20%20%20
+Method: GET 
+                   Url: /api/v1/blockchain/2%20%20%20 
+                   Date: 2024-05-05 
+                   Time: 15:33:06
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/blockchain/2%20%20%20
+Method: GET 
+                   Url: /api/v1/blockchain/2%20%20%20 
+                   Date: 2024-05-05 
+                   Time: 15:36:19
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/blockchain/2%20%20%20
+Method: GET 
+                   Url: /api/v1/blockchain/%20%20%20 
+                   Date: 2024-05-05 
+                   Time: 15:36:29
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/blockchain/%20%20%20
+Method: POST 
+                   Url: /api/v1/blockchain/mine%20 
+                   Date: 2024-05-05 
+                   Time: 15:36:44
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/blockchain/mine%20
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 16:23:55
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:50:26
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:50:32
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:51:25
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:51:54
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:51:59
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:52:23
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:52:52
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:52:54
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:53:00
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:53:02
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:54:49
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:56:22
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:57:05
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 17:57:07
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 18:19:47
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/ 
+                   Date: 2024-05-05 
+                   Time: 18:20:51
+                   Success: undefined - 
+                   Message: res.status(...).JSON is not a function
