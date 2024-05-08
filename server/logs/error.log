@@ -466,3 +466,15 @@ Method: GET
                    Time: 18:20:51
                    Success: undefined - 
                    Message: res.status(...).JSON is not a function
+Method: GET 
+                   Url: /api/v1/blockchain/%20 
+                   Date: 2024-05-06 
+                   Time: 15:12:20
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/blockchain/%20
+Method: GET 
+                   Url: /api/v1/blockchain/3 
+                   Date: 2024-05-07 
+                   Time: 11:05:46
+                   Success: undefined - 
+                   Message: Cannot set headers after they are sent to the client

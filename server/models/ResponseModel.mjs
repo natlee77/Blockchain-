@@ -1,7 +1,7 @@
 /*in http-response.json uppe   
   success: false,
   statusCode: 404,
-  error: 'Hittar inte!',
+  error: '  Not Found!',
   items: 0,
   data: null,
 */
@@ -15,15 +15,15 @@ class ResponseModel {
 
     this.error = error;
 
-    // if (data) {
-    //   if (Array.isArray(data)) {
-    //     this.items = data.length;
-    //   } else {
-    //     this.items = 1;
-    //   }
-    // } else {
-    //   this.items = 0;
-    // }
+    if (data) {
+      if (Array.isArray(data)) {
+        this.items =  data.length;
+      } else {
+        this.items = 1;
+      }
+    } else {
+      this.items = 0;
+    }
 
     this.data = data;
   }

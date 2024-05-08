@@ -1,24 +1,25 @@
 {
-  "name": "simple-rest-api",
+  "name": "my-first-blockchain",
   "version": "1.0.0",
-  "description": "",
+  "description": "My first blockchain",
   "main": "server.mjs",
   "scripts": {
-    "dev": "nodemon server",
-    "start": "NODE_ENV=production node server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --env-file=config/config.env server.mjs",
+    "start": "NODE_ENV=production node--env-file=config/config.env server.mjs",
     "debug": "ndb server.mjs"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nataliya Lisjö",
   "license": "ISC",
   "devDependencies": {
-    "ndb": "^1.1.5",
-    "nodemon": "^3.1.0"
+    "@vitest/ui": "^1.5.2",
+    "nodemon": "^3.1.0",
+    "vitest": "^1.5.2"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "uuid": "^9.0.1"
+    "express": "^4.19.2"
   }
 }
