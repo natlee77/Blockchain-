@@ -20,7 +20,7 @@ export default class Blockchain {
       previousBlockHash,
       currentBlockHash,
       data,
-      difficulty
+      INITIAL_DIFFICULTY
     );
 
     this.chain.push(block);
