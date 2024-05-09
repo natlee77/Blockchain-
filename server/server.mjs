@@ -2,6 +2,7 @@ import express from 'express';
 import logger  from './middleware/logger.mjs';
 import errorHandler  from './middleware/errorHandler.mjs' ;
 import blocksRouter  from './routes/blocks-routes.mjs' ;
+import membersRouter  from  './routes/member-routes.mjs' ;
 import ErrorResponse  from './models/ErrorResponseModel.mjs';
 // Lösningen på att få tag i __dirname för ES6 modul sökvägen.
 import path from 'path';
@@ -15,8 +16,9 @@ global.__appdir = dirname;
 
 //  Middleware...körs som de plaseras automatisk--ex: felhantering, inlogning controll-logger.js
 app.use(express.json()); 
+//endpoints
 app.use('/api/v1/blockchain', blocksRouter);
-
+app.use('/api/v1/members', membersRouter);
 // _____Catch all url 
 app.all('*', (req, res, next) => {   
   //error msg in postman  
@@ -31,7 +33,7 @@ if (process.env.NODE_ENV === 'development') {
   app.use(logger);
 }
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.argv[2] || 5010;
 // start server
 app.listen(PORT, () =>
   console.log(` Server is running in ____  ${process.env.NODE_ENV} mode ____ on port ${PORT}`)

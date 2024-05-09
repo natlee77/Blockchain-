@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --env-file=config/config.env server.mjs",
     "start": "NODE_ENV=production node--env-file=config/config.env server.mjs",
-    "debug": "ndb server.mjs"
+    "debug": "ndb server.mjs",
+    "node-1": "nodemon  server.mjs 4001 http://localhost:4001",
+    "node-2": "nodemon  server.mjs 4002 http://localhost:4002"
   },
   "keywords": [],
   "author": "Nataliya Lisjö",

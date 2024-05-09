@@ -1,9 +1,4 @@
-Method: GET 
-                   Url: /api/v1/blocks/19740345 
-                   Date: 2024-04-27 
-                   Time: 18:18:03
-                   Success: false - 
-                   Message: can not find block_height 19740345
+ 
 Method: GET 
                    Url: /api/v1/blockchain/mine 
                    Date: 2024-05-03 
@@ -147,31 +142,8 @@ Method: POST
                    Date: 2024-05-05 
                    Time: 13:39:51
                    Success: undefined - 
-                   Message: Cannot set headers after they are sent to the client
-Method: POST 
-                   Url: /api/v1/blockchain/mine 
-                   Date: 2024-05-05 
-                   Time: 13:39:54
-                   Success: undefined - 
-                   Message: Cannot set headers after they are sent to the client
-Method: POST 
-                   Url: /api/v1/blockchain/mine 
-                   Date: 2024-05-05 
-                   Time: 13:39:56
-                   Success: undefined - 
-                   Message: Cannot set headers after they are sent to the client
-Method: POST 
-                   Url: /api/v1/blockchain/mine 
-                   Date: 2024-05-05 
-                   Time: 13:40:44
-                   Success: undefined - 
-                   Message: Cannot set headers after they are sent to the client
-Method: POST 
-                   Url: /api/v1/blockchain/mine 
-                   Date: 2024-05-05 
-                   Time: 14:05:13
-                   Success: undefined - 
-                   Message: Cannot set headers after they are sent to the client
+                   Message: Cannot set headers after they are sent to the client  
+ 
 Method: POST 
                    Url: /api/v1/blockchain/mine 
                    Date: 2024-05-05 
@@ -478,3 +450,285 @@ Method: GET
                    Time: 11:05:46
                    Success: undefined - 
                    Message: Cannot set headers after they are sent to the client
+Method: GET 
+                   Url: /api/v1/members%20 
+                   Date: 2024-05-09 
+                   Time: 16:07:52
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members%20
+Method: GET 
+                   Url: /api/v1/members%20 
+                   Date: 2024-05-09 
+                   Time: 16:08:03
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members%20
+Method: POST 
+                   Url: /api/v1/members/ 
+                   Date: 2024-05-09 
+                   Time: 16:13:33
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members/
+Method: POST 
+                   Url: /api/v1/members 
+                   Date: 2024-05-09 
+                   Time: 16:13:39
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 16:14:40
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members/register-node
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 16:18:28
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members/register-node
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 16:19:34
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members/register-node
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 16:19:54
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members/register-node
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 16:20:50
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members/register-node
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 16:21:17
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members/register-node
+Method: POST 
+                   Url: /api/v1/members 
+                   Date: 2024-05-09 
+                   Time: 16:22:14
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members
+Method: POST 
+                   Url: /api/v1/members 
+                   Date: 2024-05-09 
+                   Time: 16:22:21
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members
+Method: POST 
+                   Url: /api/v1/members 
+                   Date: 2024-05-09 
+                   Time: 16:23:16
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 16:36:54
+                   Success: undefined - 
+                   Message: blockchain.memberNodes is not iterable
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 16:38:58
+                   Success: undefined - 
+                   Message: blockchain.memberNodes is not iterable
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 16:40:06
+                   Success: undefined - 
+                   Message: blockchain.memberNodes is not iterable
+Method: POST 
+                   Url: /api/v1/members 
+                   Date: 2024-05-09 
+                   Time: 16:42:33
+                   Success: false - 
+                   Message: can not find URL resurs /api/v1/members
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:12:23
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:13:02
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:14:12
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:14:31
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:14:32
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:14:46
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'host')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:14:48
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'host')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:14:55
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:14:57
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:15:16
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:15:17
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:15:33
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:15:35
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:16:29
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:16:34
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:17:36
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:17:39
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:19:01
+                   Success: undefined - 
+                   Message: nodeUrl is not defined
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:19:03
+                   Success: undefined - 
+                   Message: nodeUrl is not defined
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:19:05
+                   Success: undefined - 
+                   Message: nodeUrl is not defined
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:19:30
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:19:44
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:19:47
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:20:31
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:20:32
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:20:54
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:20:58
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:21:05
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'headers')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:21:28
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'host')
+Method: POST 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 17:21:29
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'host')

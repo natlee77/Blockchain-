@@ -8,6 +8,9 @@ const INITIAL_DIFFICULTY = +process.env.INITIAL_DIFFICULTY;
 export default class Blockchain {
   constructor() {
     this.chain = [];
+    // noder  that are connected to the network
+    this.networkNodes = [];
+    this.nodeUrl = process.argv[3]; //99% url
     // create genesis(1) block... 
      this.createBlock(Date.now(), '0000', '0000', [{ "data" : "Genesis Block"}, INITIAL_DIFFICULTY]);
      //save to .json
