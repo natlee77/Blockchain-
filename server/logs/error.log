@@ -762,3 +762,9 @@ Method: GET
                    Time: 20:08:42
                    Success: false - 
                    Message:  can not find URL resurs /api/v1/members%20
+Method: GET 
+                   Url: /api/v1/members/register-node 
+                   Date: 2024-05-09 
+                   Time: 20:15:00
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/members/register-node

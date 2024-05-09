@@ -23,8 +23,7 @@ app.use('/api/v1/members', membersRouter);
 app.all('*', (req, res, next) => {   
   //error msg in postman  
   next(new  ErrorResponse(` can not find URL resurs ${req.originalUrl}` ,404  ));
-});//efter --> app.use(errorHandler);
-
+}); 
 //______ Central felhantering...
  app.use(errorHandler); 
 

@@ -4,9 +4,12 @@ import ResponseModel from '../models/ResponseModel.mjs';
 
 export const listMembers = (req, res, next) => {
     console.log('listMembers_______', blockchain.networkNodes);
-  try {
-   res.status(200).json( new ResponseModel({   statusCode: 200, data: blockchain.networkNodes }));
-  } catch (error) {
+
+    if ( blockchain.networkNodes.length > 0 ) 
+  {
+    res.status(200).json( new ResponseModel({   statusCode: 200, data: blockchain.networkNodes }));
+  } else  
+   {
     res.status(500).json( new ResponseModel({ statusCode: 500, error: 'can not list members ' }));
   } 
 };
@@ -15,15 +18,9 @@ export const registerNode = (req, res, next) => {
   // Ta ut ur req.body adressen till servern som vill bli medlem...
   const node = req.body;    
 
-  if ( blockchain.networkNodes.indexOf(node.nodeUrl) === -1  ) //have already  
-  {
-    if ( process.argv[3] === node.nodeUrl) // check if node is blockchain node
-    {
-      res.status(400).json( new ResponseModel({ 
-        statusCode: 400,
-        error: `Node ${node.nodeUrl} are blockchain node ` 
-      })) ;
-    }else {
+  if ( blockchain.networkNodes.indexOf(node.nodeUrl) === -1 &&
+    blockchain.currentNodeUrl !== node.nodeUrl ) //have already  
+  { 
       blockchain.networkNodes.push(node.nodeUrl);
     //syncronize members, send new node/member to all members, 
      syncMembers( node.nodeUrl ); 
@@ -32,7 +29,7 @@ export const registerNode = (req, res, next) => {
       statusCode: 201,
       data: { message: `Node  ${node.nodeUrl} are registreted` },
     }));
-  }
+  
   } else {    
       res.status(400).json( new ResponseModel({ 
       statusCode: 400,
