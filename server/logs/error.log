@@ -732,3 +732,33 @@ Method: POST
                    Time: 17:21:29
                    Success: undefined - 
                    Message: Cannot read properties of undefined (reading 'host')
+Method: POST 
+                   Url: /api/v1/members/register-node%20 
+                   Date: 2024-05-09 
+                   Time: 19:54:44
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/members/register-node%20
+Method: POST 
+                   Url: /api/v1/members/register-node%20 
+                   Date: 2024-05-09 
+                   Time: 19:56:26
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/members/register-node%20
+Method: GET 
+                   Url: /api/v1/members%20 
+                   Date: 2024-05-09 
+                   Time: 20:07:09
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/members%20
+Method: GET 
+                   Url: /api/v1/members%20 
+                   Date: 2024-05-09 
+                   Time: 20:07:35
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/members%20
+Method: GET 
+                   Url: /api/v1/members%20 
+                   Date: 2024-05-09 
+                   Time: 20:08:42
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/members%20
