@@ -1,7 +1,7 @@
 import { createHash } from '../utilities/crypto-lib.mjs';
 import Block from './Block.mjs';
  
-import writeFile from '../utilities/fileHandler.mjs';
+import writeFile from  '../utilities/fileHandler.mjs';
 import blocks from '../data/blocks.json'with {  type: 'json'};
 
 const INITIAL_DIFFICULTY = +process.env.INITIAL_DIFFICULTY;
@@ -10,6 +10,8 @@ export default class Blockchain {
     this.chain = [];
     // create genesis(1) block... 
      this.createBlock(Date.now(), '0000', '0000', [{ "data" : "Genesis Block"}, INITIAL_DIFFICULTY]);
+     //save to .json
+      //  writeFile('data', 'blocks.json', this.chain);   
   }
   // Metod för att lägga till ett nytt block i kedjan...
   createBlock(timestamp, previousBlockHash, currentBlockHash, data, difficulty)   {

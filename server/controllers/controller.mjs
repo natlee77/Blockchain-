@@ -56,7 +56,7 @@ export const createBlock = (req, res, next) => {
     }));
   }
   //save to .json  
-  // writeFile('data', 'blocks.json', blockchain );   
+   writeFile('data', 'blocks.json', blockchain );   
 }; 
 export const getBlock = (req, res, next) => {
   try {
