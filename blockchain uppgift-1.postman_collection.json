@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "c6f5e59d-b2a1-4a1a-8000-64e5da1c931f",
+		"name": "blockchain uppgift-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12793915",
+		"_collection_link": "https://ecutbildning.postman.co/workspace/f76ee68b-dfbd-4ddd-ae14-50546665f2b2/collection/12793915-c6f5e59d-b2a1-4a1a-8000-64e5da1c931f?action=share&source=collection_link&creator=12793915"
+	},
+	"item": [
+		{
+			"name": "all 5010",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5010/api/v1/blockchain/",
+					"host": [
+						"localhost"
+					],
+					"port": "5010",
+					"path": [
+						"api",
+						"v1",
+						"blockchain",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all 4001",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/api/v1/blockchain/",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"blockchain",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all 4002",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4002/api/v1/blockchain/",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"api",
+						"v1",
+						"blockchain",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mine 5010",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n                    \"nft\" :\"frog 5010 \"\r\n                } \r\n           ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5010/api/v1/blockchain/mine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5010",
+					"path": [
+						"api",
+						"v1",
+						"blockchain",
+						"mine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mine 4001",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NFT\" : \"frog 4001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/api/v1/blockchain/mine",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"blockchain",
+						"mine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mine 4002",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n                    \"nft\" :\"frog 4002 \"\r\n                } \r\n           ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/api/v1/blockchain/mine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"api",
+						"v1",
+						"blockchain",
+						"mine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register-node 4002",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nodeUrl\": \"http://localhost:5010\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/api/v1/members/register-node",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"api",
+						"v1",
+						"members",
+						"register-node"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register-node 4001",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nodeUrl\": \"http://localhost:5010\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/api/v1/members/register-node",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"members",
+						"register-node"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "by Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5003/api/v1/blockchain/2",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"api",
+						"v1",
+						"blockchain",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consensus 5010",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5010/api/v1/blockchain/concensus",
+					"host": [
+						"localhost"
+					],
+					"port": "5010",
+					"path": [
+						"api",
+						"v1",
+						"blockchain",
+						"concensus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "concensus 4001",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4001/api/v1/blockchain/concensus",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"blockchain",
+						"concensus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "members 4001",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4001/api/v1/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"api",
+						"v1",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "members 5010",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5010/api/v1/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5010",
+					"path": [
+						"api",
+						"v1",
+						"members"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

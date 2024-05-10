@@ -3,8 +3,7 @@ import { blockchain } from '../startup.mjs';
 import ResponseModel from '../models/ResponseModel.mjs';
 
 export const listMembers = (req, res, next) => {
-    console.log('listMembers_______', blockchain.networkNodes);
-
+  
     if ( blockchain.networkNodes.length > 0 ) 
   {
     res.status(200).json( new ResponseModel({   statusCode: 200, data: blockchain.networkNodes }));
@@ -25,17 +24,11 @@ export const registerNode = (req, res, next) => {
     //syncronize members, send new node/member to all members, 
      syncMembers( node.nodeUrl ); 
 
-      res.status(201).json( new ResponseModel({
-      statusCode: 201,
-      data: { message: `Node  ${node.nodeUrl} are registreted` },
+      res.status(201).json( new ResponseModel({ statusCode: 201, error: `Node  ${node.nodeUrl} are registreted` 
     }));
   
   } else {    
-      res.status(400).json( new ResponseModel({ 
-      statusCode: 400,
-      data: { message: `Node ${node.nodeUrl} are already blockchain member ` },
-    }));
-     
+      res.status(400).json( new ResponseModel({ statusCode: 400, error: `Node ${node.nodeUrl} are already blockchain member ` }));     
   }
 };
 //syncronize members, send new node/member to all members,  
@@ -61,7 +54,4 @@ const syncMembers = (url) => {
     res.status(500).json(new ResponseModel ({ error: "can not sync members", statusCode: 500 }));
   }
 };
-// res.status(500).json(new ResponseModel({
-//   statusCode: 500,
-//   error: 'you cannot create block:('
-// }));
+ 

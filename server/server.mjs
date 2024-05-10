@@ -1,6 +1,6 @@
 import express from 'express'; 
 import logger  from './middleware/logger.mjs';
-import errorHandler  from './middleware/errorHandler.mjs' ;
+import errorHandler  from './middleware/errorHandlerLogger.mjs' ;
 import blocksRouter  from './routes/blocks-routes.mjs' ;
 import membersRouter  from  './routes/member-routes.mjs' ;
 import ErrorResponse  from './models/ErrorResponseModel.mjs';

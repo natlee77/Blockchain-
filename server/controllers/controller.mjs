@@ -10,7 +10,7 @@ export const getBlockChain = (req, res, next) => {
 
     res.status(200).json(new ResponseModel({
       statusCode: 200,
-      data: blockchain.chain
+      data: blockchain//.chain
     }));
 
   } catch (error) {
@@ -56,7 +56,7 @@ export const createBlock = (req, res, next) => {
     }));
   }
   //save to .json  
-   writeFile('data', 'blocks.json', blockchain );   
+  //  writeFile('data', 'blocks.json', blockchain );   
 }; 
 export const getBlock = (req, res, next) => {
   try {
@@ -80,6 +80,48 @@ export const getBlock = (req, res, next) => {
     }));
   }
 }
+//controll chain updated-actuelt
+export const synchronizeChain = (req, res, next) => {
+  // Ta reda på aktuellt antal block i kedjan.
+  const currentLength = blockchain.chain.length;
+  let maxLength = currentLength;
+  let longestChain = null;
+
+  // Gå igenom alla noder i memberNodes för aktuellt node...
+  blockchain.networkNodes.forEach(async (member) => {
+    const response = await fetch(`${member}/api/v1/blockchain`);
+   
+    if (response.ok) {
+      const result = await response.json();
+      console.log('result.lengt-', result.data.chain.length,                 
+                   " currentLength-", currentLength, 
+                   "maxLength-", maxLength);
+   
+      if (result.data.chain.length > maxLength) {
+        maxLength = result.data.chain.length;
+        longestChain = result.data;       
+      }
+      console.log('longestChain', longestChain);
+      if ( !longestChain ||  (longestChain && !blockchain.validateChain(longestChain)))
+       {
+        console.log('Synchronized already');
+        // console.log('longestChain', longestChain); 
+      } else {
+        blockchain.chain = longestChain;
+        console.log(blockchain); 
+      }
+
+     
+    
+    }
+    
+  });
+
+res.status(200).json( new ResponseModel({ statusCode: 200, data:  `Synchronisering with  are finished  `  }));
+//${member}
+ 
+
+};
 //___________________________
 // export const addBlock = (req, res, next) => {
 //   try { 
@@ -102,16 +144,8 @@ export const getBlock = (req, res, next) => {
 // export const updateBlock = (req, res,next) => {
 //   try {
 //     const block = blocks.find((b) => b.Block_Height === +req.params.id);
-
-
 //     if (!block) {
-//       res.status(404).json(
-//         new ResponseModel({
-//           statusCode: 404,
-//           error: `:( can not uppdate/find block id ${id}`,
-//         })
-//       );
-
+//       res.status(404).json( new ResponseModel({ statusCode: 404, error: `:( can not uppdate/find block id ${id}`, }) );
 //       return;
 //     }
 

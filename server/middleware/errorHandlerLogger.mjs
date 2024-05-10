@@ -10,7 +10,7 @@ const errorHandler = (err, req, res, next) => {
   err.status = err.status || 'Can not get filePath -Internal Server Error';
 //___msg 
   const message = `Method: ${req.method} 
-                   Url: ${req.originalUrl} 
+                   Url:  ${req.headers.host}${req.originalUrl}  
                    Date: ${new Date().toLocaleDateString('sv-SE')} 
                    Time: ${new Date().toLocaleTimeString('sv-SE')}
                    Success: ${err.success} - 

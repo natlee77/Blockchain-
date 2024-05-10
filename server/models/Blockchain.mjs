@@ -7,15 +7,18 @@ import blocks from '../data/blocks.json'with {  type: 'json'};
 const INITIAL_DIFFICULTY = +process.env.INITIAL_DIFFICULTY;
 export default class Blockchain {
   constructor() {
+    if  (!this.chain) { 
     this.chain = [];
     // noder  that are connected to the network
     this.networkNodes = [];
-    this.nodeUrl = process.argv[3]; //99% url
+    this.nodeUrl =process.argv[3]; //99% url
+    console.log("nodeUrl- ", process.argv[3]);
     // create genesis(1) block... 
-     this.createBlock(Date.now(), '0000', '0000', [{ "data" : "Genesis Block"}, INITIAL_DIFFICULTY]);
+     this.createBlock(Date.now(), '0000', '0000', [{ "data" : "Genesis Block"}, INITIAL_DIFFICULTY, "nodeUrl- ",this.nodeUrl]);
      //save to .json
       //  writeFile('data', 'blocks.json', this.chain);   
   }
+}
   // Metod för att lägga till ett nytt block i kedjan...
   createBlock(timestamp, previousBlockHash, currentBlockHash, data, difficulty)   {
     // Skapa blocket...
@@ -86,5 +89,28 @@ export default class Blockchain {
  
     return difficulty;
  }
+
+ validateChain(blockchain) {
+  let isValid = true;
+
+  // Gå igenom varje block i kedjan och validera dem.
+  for (let i = 1; i < blockchain.length; i++) {
+    const block = blockchain[i];
+    console.log(block);
+    const previousBlock = blockchain[i - 1];//
+
+    const hash = this.hashBlock(
+      block.timestamp,
+      previousBlock.currentBlockHash,
+      block.data
+    );
+
+    if (hash !== block.currentBlockHash) isValid = false;
+    if (block.previousBlockHash !== previousBlock.currentBlockHash)
+      isValid = false;
+  }
+
+  return isValid;
+}
 } 
  

@@ -768,3 +768,64 @@ Method: GET
                    Time: 20:15:00
                    Success: false - 
                    Message:  can not find URL resurs /api/v1/members/register-node
+  
+Method: POST 
+                   Url:  localhost:4001/api/v1/members/register-node%20  
+                   Date: 2024-05-09 
+                   Time: 20:51:16
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/members/register-node%20
+Method: POST 
+                   Url:  localhost:4001/api/v1/members/register-node%20  
+                   Date: 2024-05-09 
+                   Time: 20:52:28
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/members/register-node%20
+Method: GET 
+                   Url:  localhost:5010/api/v1/blockchain/concensus  
+                   Date: 2024-05-10 
+                   Time: 13:47:35
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/blockchain/concensus
+Method: GET 
+                   Url:  localhost:5010/api/v1/blockchain/concensus  
+                   Date: 2024-05-10 
+                   Time: 13:49:40
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'forEach')
+Method: GET 
+                   Url:  localhost:4001/api/v1/blockchain/concensus  
+                   Date: 2024-05-10 
+                   Time: 14:48:33
+                   Success: undefined - 
+                   Message: member is not defined
+Method: GET 
+                   Url:  localhost:5010/api/v1/blockchain/concensus  
+                   Date: 2024-05-10 
+                   Time: 14:51:35
+                   Success: undefined - 
+                   Message: member is not defined
+Method: GET 
+                   Url:  localhost:4001/api/v1/blockchain/concensus  
+                   Date: 2024-05-10 
+                   Time: 14:52:05
+                   Success: undefined - 
+                   Message: member is not defined
+Method: GET 
+                   Url:  localhost:5010/api/v1/blockchain/concensus  
+                   Date: 2024-05-10 
+                   Time: 14:54:03
+                   Success: undefined - 
+                   Message: member is not defined
+Method: GET 
+                   Url:  localhost:4001/api/v1/blockchain/concensus  
+                   Date: 2024-05-10 
+                   Time: 15:05:12
+                   Success: undefined - 
+                   Message: member is not defined
+Method: GET 
+                   Url:  localhost:5010/api/v1/blockchain/mine  
+                   Date: 2024-05-10 
+                   Time: 16:59:16
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/blockchain/mine
