@@ -93,22 +93,27 @@ export const synchronizeChain = (req, res, next) => {
    
     if (response.ok) {
       const result = await response.json();
-      console.log('result.lengt-', result.data.chain.length,                 
-                   " currentLength-", currentLength, 
-                   "maxLength-", maxLength);
+      // console.log('result.lengt-', result.data.chain.length,                 
+      //              " currentLength-", currentLength, 
+      //              "maxLength-", maxLength);
    
       if (result.data.chain.length > maxLength) {
         maxLength = result.data.chain.length;
-        longestChain = result.data;       
+        longestChain = result.data.chain;       
       }
-      console.log('longestChain', longestChain);
-      if ( !longestChain ||  (longestChain && !blockchain.validateChain(longestChain)))
+      // console.log('longestChain', longestChain);
+      if (
+         !longestChain ||  
+         (longestChain && !blockchain.validateChain(longestChain)))
        {
         console.log('Synchronized already');
         // console.log('longestChain', longestChain); 
       } else {
         blockchain.chain = longestChain;
         console.log(blockchain); 
+        console.log('Synchronized now');
+        
+        // writeFile('data', 'blocks.json', blockchain );
       }
 
      

@@ -1,29 +1,3 @@
 {
-    "chain": [
-        {
-            "blockIndex": 1,
-            "timestamp": 1715333467572,
-            "previousBlockHash": "0000",
-            "currentBlockHash": "0000",
-            "data": [
-                {
-                    "data": "Genesis Block"
-                },
-                null
-            ],
-            "difficulty": null
-        },
-        {
-            "blockIndex": 2,
-            "timestamp": 1715333483698,
-            "previousBlockHash": "0000",
-            "currentBlockHash": "a5056dc1ce45bab9d4a0473e62fcc5a6f675674ee66711223a6bb19815e304fa",
-            "data": {
-                "NFT": "frogdasdasdad"
-            },
-            "difficulty": null
-        }
-    ],
-    "networkNodes": [],
-    "nodeUrl": "http://localhost:4001"
+     
 }

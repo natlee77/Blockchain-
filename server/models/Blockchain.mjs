@@ -4,7 +4,7 @@ import Block from './Block.mjs';
 import writeFile from  '../utilities/fileHandler.mjs';
 import blocks from '../data/blocks.json'with {  type: 'json'};
 
-const INITIAL_DIFFICULTY = +process.env.INITIAL_DIFFICULTY;
+let DIFFICULTY_LEVEL = +process.env.INITIAL_DIFFICULTY;
 export default class Blockchain {
   constructor() {
     if  (!this.chain) { 
@@ -14,7 +14,7 @@ export default class Blockchain {
     this.nodeUrl =process.argv[3]; //99% url
     console.log("nodeUrl- ", process.argv[3]);
     // create genesis(1) block... 
-     this.createBlock(Date.now(), '0000', '0000', [{ "data" : "Genesis Block"}, INITIAL_DIFFICULTY, "nodeUrl- ",this.nodeUrl]);
+     this.createBlock(Date.now(), '0000', '0000', [{ "data" : "Genesis Block"}, DIFFICULTY_LEVEL, "nodeUrl- ",this.nodeUrl]);
      //save to .json
       //  writeFile('data', 'blocks.json', this.chain);   
   }
@@ -28,7 +28,7 @@ export default class Blockchain {
       previousBlockHash,
       currentBlockHash,
       data,
-      INITIAL_DIFFICULTY
+      DIFFICULTY_LEVEL
     );
 
     this.chain.push(block);
@@ -57,7 +57,7 @@ export default class Blockchain {
     }
 
   proofOfWork(timestamp, previousBlockHash, data) {
-   let DIFFICULTY_LEVEL = INITIAL_DIFFICULTY;
+  //  let DIFFICULTY_LEVEL = INITIAL_DIFFICULTY;
     // calculate hash with nonce from 0 to 2^256 - 1
     let nonce = 0;
     let hash = this.hashBlock(timestamp, previousBlockHash, data, nonce);
@@ -85,7 +85,7 @@ export default class Blockchain {
     difficulty = timestamp + MINE_RATE  > currentTimestamp
       ?  difficulty + 1  
       :  difficulty - 1 ; 
- console.log('difficulty, ', difficulty );
+//  console.log('difficulty, ', difficulty );
  
     return difficulty;
  }

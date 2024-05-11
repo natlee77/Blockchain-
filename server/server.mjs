@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'development') {
   app.use(logger);
 }
 
-const PORT = process.argv[2] || 5010;
+const PORT = process.argv[2] || 5011;
 // start server
 app.listen(PORT, () =>
   console.log(` Server is running in ____  ${process.env.NODE_ENV} mode ____ on port ${PORT}`)
