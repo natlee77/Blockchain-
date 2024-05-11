@@ -20,10 +20,10 @@ export default class Blockchain {
   }
 }
   // Metod för att lägga till ett nytt block i kedjan...
-  createBlock(timestamp, previousBlockHash, currentBlockHash, data, difficulty)   {
+  createBlock(blockIndex,timestamp, previousBlockHash, currentBlockHash, data, difficulty)   {
     // Skapa blocket...
     const block = new Block(     
-      this.chain.length + 1,
+      blockIndex,
       timestamp,
       previousBlockHash,
       currentBlockHash,
@@ -32,9 +32,7 @@ export default class Blockchain {
     );
 
     this.chain.push(block);
-    return block;
-    // save to json
-    // writeFile('data', 'blocks.json', this.chain);
+    return block; 
   }
   getBlockByIndex(index) {
     return this.chain[index];

@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url'; // node
 const app = express();
 //______root-catalog in node.js global  object 
 const filename = fileURLToPath(import.meta.url);
-console.log('_________filename: ', filename);
+// console.log('_________filename: ', filename);
 const dirname = path.dirname(filename);
 console.log('_________dirname: ', dirname);
 global.__appdir = dirname;

@@ -11,13 +11,13 @@ export const writeFile = (folderName, fileName, data) => {
     throw new Error(error.message);
   }
 };
-export const addToFile = (folderName, fileName, data) => {
-   try {
-     const filePath = path.join(__appdir, folderName, fileName);
-     fs.appendFileSync(filePath, JSON.stringify(data));
-   } catch (error) {
-     throw new Error(error.message);
-   }
-}
+ export const addToFile = (folderName, fileName, data) => {
+//    try {
+//      const filePath = path.join(__appdir, folderName, fileName);
+//      fs.appendFileSync(filePath, JSON.stringify(data));
+//    } catch (error) {
+//      throw new Error(error.message);
+//    }
+  }
  
 

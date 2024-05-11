@@ -1,13 +1,13 @@
 import Chain from '../data/blocks.json'with {  type: 'json'};
 import ResponseModel from '../models/ResponseModel.mjs';
-import { addToFile,  writeFile } from '../utilities/fileHandler.mjs';
+import {    writeFile } from '../utilities/fileHandler.mjs';
 import {
   blockchain
 } from '../startup.mjs';
 
 export const getBlockChain = (req, res, next) => {
    
-  console.log('Chain', Chain, Chain.chain );
+   
   
   if (  Chain.chain === undefined || Chain.chain ===0)
   { 
@@ -37,32 +37,45 @@ export const createBlock = (req, res, next) => {
   try {
     const timestamp = Date.now();
     const data = req.body; //data in postman  
-    // const lastBlock = blockchain.getLastBlock();
-    const lastBlockHash = blockchain.getLastBlock().currentBlockHash
+    const blockIndex = Chain.chain.at(-1).blockIndex+1;
+    const lastBlockHash = Chain.chain.at(-1).currentBlockHash;
     const nonce = blockchain.proofOfWork(
       timestamp,
       lastBlockHash,
       data);
     const difficulty = blockchain.proofOfWork(timestamp, lastBlockHash, data).DIFFICULTY_LEVEL;
     const currentBlockHash = blockchain.hashBlock(timestamp, lastBlockHash, req.body, data, nonce);
+ 
     //create block
     const block = blockchain.createBlock(
+      blockIndex,
       timestamp,
       lastBlockHash,
       currentBlockHash,
       data,
       difficulty
     )
-    console.log('block--------', block);
-    console.log('blockchain  -------', blockchain );
+
+   blockchain.networkNodes.forEach(async(url) => {
+    const body = { block };
+    await fetch(`${url}/api/v1/blockchain/block/broadcast`, {
+      method: 'POST', 
+      body: JSON.stringify(body), 
+      headers: {
+        'Content-Type': 'application/json'},
+      }); 
+    })  
+
+
     
     
     //save to .json  
     Chain.chain.push(block);
     writeFile('data', 'blocks.json', Chain );   
+
     res.status(201).json(new ResponseModel({
       statusCode: 200,
-      data: block
+      data: { message: 'block created and distributed'  ,block }, 
     }));
 
 
@@ -97,52 +110,73 @@ export const getBlock = (req, res, next) => {
   }
 }
 //controll chain updated-actuelt
-export const synchronizeChain = (req, res, next) => {
-  // Ta reda på aktuellt antal block i kedjan.
-  const currentLength = blockchain.chain.length;
-  let maxLength = currentLength;
-  let longestChain = null;
+const updateChain = (req, res, next) => {
+  const block = req.body.block;
+  const lastBlock = blockchain.getLastBlock();
+  const lastBlockHash = lastBlock.currentBlockHash===block.previousBlockHash 
+  const index = lastBlock.index+1 === block.blockIndex; 
 
-  // Gå igenom alla noder i memberNodes för aktuellt node...
-  blockchain.networkNodes.forEach(async (member) => {
-    const response = await fetch(`${member}/api/v1/blockchain`);
+  if (lastBlockHash && index) {
+    blockchain.chain.push(block);
+    res.status(201).json(new ResponseModel({
+      statusCode: 201,
+      data:{ 
+        message: 'block created and can be distributed',
+        block:block}
+    }));
+  } else {
+    res.status(500).json(new ResponseModel({
+      statusCode: 500,
+      error: 'you cannot update chain'
+    }));
+  }
+}
+  export const synchronizeChain = (req, res, next) => {
+//   // Ta reda på aktuellt antal block i kedjan.
+//   const currentLength = blockchain.chain.length;
+//   let maxLength = currentLength;
+//   let longestChain = null;
+
+//   // Gå igenom alla noder i memberNodes för aktuellt node...
+//   blockchain.networkNodes.forEach(async (member) => {
+//     const response = await fetch(`${member}/api/v1/blockchain`);
    
-    if (response.ok) {
-      const result = await response.json();
-      // console.log('result.lengt-', result.data.chain.length,                 
-      //              " currentLength-", currentLength, 
-      //              "maxLength-", maxLength);
+//     if (response.ok) {
+//       const result = await response.json();
+//       // console.log('result.lengt-', result.data.chain.length,                 
+//       //              " currentLength-", currentLength, 
+//       //              "maxLength-", maxLength);
    
-      if (result.data.chain.length > maxLength) {
-        maxLength = result.data.chain.length;
-        longestChain = result.data.chain;       
-      }
-      // console.log('longestChain', longestChain);
-      if (
-         !longestChain ||  
-         (longestChain && !blockchain.validateChain(longestChain)))
-       {
-        console.log('Synchronized already');
-        // console.log('longestChain', longestChain); 
-      } else {
-        blockchain.chain = longestChain;
-        console.log(blockchain); 
-        console.log('Synchronized now');
+//       if (result.data.chain.length > maxLength) {
+//         maxLength = result.data.chain.length;
+//         longestChain = result.data.chain;       
+//       }
+//       // console.log('longestChain', longestChain);
+//       if (
+//          !longestChain ||  
+//          (longestChain && !blockchain.validateChain(longestChain)))
+//        {
+//         console.log('Synchronized already');
+//         // console.log('longestChain', longestChain); 
+//       } else {
+//         blockchain.chain = longestChain;
+//         console.log(blockchain); 
+//         console.log('Synchronized now');
         
-        // writeFile('data', 'blocks.json', blockchain );
-      }
+//         // writeFile('data', 'blocks.json', blockchain );
+        }
 
      
     
-    }
+//     }
     
-  });
+//   });
 
-res.status(200).json( new ResponseModel({ statusCode: 200, data:  `Synchronisering with  are finished  `  }));
-//${member}
+// res.status(200).json( new ResponseModel({ statusCode: 200, data:  `Synchronisering with  are finished  `  }));
+// //${member}
  
 
-};
+// };
 //___________________________
 // export const addBlock = (req, res, next) => {
 //   try { 

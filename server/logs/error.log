@@ -835,3 +835,69 @@ Method: GET
                    Time: 14:09:58
                    Success: undefined - 
                    Message: Cannot read properties of undefined (reading 'length')
+Method: POST 
+                   Url:  localhost:5011/api/v1/blockchain/mine  
+                   Date: 2024-05-11 
+                   Time: 15:14:45
+                   Success: undefined - 
+                   Message: Chain.chain.getLastBlock is not a function
+Method: POST 
+                   Url:  localhost:5011/api/v1/blockchain/mine  
+                   Date: 2024-05-11 
+                   Time: 15:15:00
+                   Success: undefined - 
+                   Message: Chain.chain.getLastBlock is not a function
+Method: POST 
+                   Url:  localhost:5011/api/v1/blockchain/mine  
+                   Date: 2024-05-11 
+                   Time: 15:19:09
+                   Success: undefined - 
+                   Message: blockchain.chain.getLastBlock is not a function
+Method: POST 
+                   Url:  localhost:5011/api/v1/blockchain/mine  
+                   Date: 2024-05-11 
+                   Time: 15:19:47
+                   Success: undefined - 
+                   Message: blockchain.chain.getLastBlock is not a function
+Method: POST 
+                   Url:  localhost:5011/api/v1/blockchain/mine  
+                   Date: 2024-05-11 
+                   Time: 15:21:14
+                   Success: undefined - 
+                   Message: Chain.getLastBlock is not a function
+Method: POST 
+                   Url:  localhost:5011/api/v1/blockchain/mine  
+                   Date: 2024-05-11 
+                   Time: 15:22:16
+                   Success: undefined - 
+                   Message: Chain.getLastBlock is not a function
+Method: POST 
+                   Url:  localhost:5011/api/v1/blockchain/mine  
+                   Date: 2024-05-11 
+                   Time: 15:22:41
+                   Success: undefined - 
+                   Message: blockchain.getLastBlock is not a function
+Method: POST 
+                   Url:  localhost:5011/api/v1/blockchain/mine  
+                   Date: 2024-05-11 
+                   Time: 15:22:46
+                   Success: undefined - 
+                   Message: blockchain.getLastBlock is not a function
+Method: POST 
+                   Url:  localhost:4001/api/v1/blockchain/block/broadcast  
+                   Date: 2024-05-11 
+                   Time: 15:58:16
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/blockchain/block/broadcast
+Method: POST 
+                   Url:  localhost:5011/api/v1/blockchain/block/broadcast  
+                   Date: 2024-05-11 
+                   Time: 15:58:16
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/blockchain/block/broadcast
+Method: POST 
+                   Url:  localhost:5010/api/v1/blockchain/block/broadcast  
+                   Date: 2024-05-11 
+                   Time: 15:58:16
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/blockchain/block/broadcast

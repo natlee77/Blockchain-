@@ -1,10 +1,10 @@
-/*in http-response.json uppe   
+/*________in http-response.json upp    
   success: false,
   statusCode: 404,
   error: '  Not Found!',
   items: 0,
   data: null,
-*/
+_________*/
 
 class ResponseModel {
   constructor({ statusCode = 404, data = null, error = null }) {
