@@ -1,3 +1,30 @@
 {
-     
+    "chain": [
+        {
+            "blockIndex": 1,
+            "timestamp": 1715429488872,
+            "previousBlockHash": "0000",
+            "currentBlockHash": "1000",
+            "data": [
+                {
+                    "data": "Genesis Block"
+                },
+                3,
+                "nodeUrl: ",
+                null
+            ],
+            "difficulty": 3
+        },
+        {
+            "blockIndex": 2,
+            "timestamp": 1715429950188,
+            "previousBlockHash": "0000",
+            "currentBlockHash": "ed1a6af6876508faf62d9929787f621baaa4fb051ef0d5aec2d092c5c27531cd",
+            "data": {
+                "nft": "frog 5010 "
+            },
+            "difficulty": 4
+        } 
+    ],
+    "networkNodes": []
 }

@@ -1,8 +1,8 @@
 import { createHash } from '../utilities/crypto-lib.mjs';
 import Block from './Block.mjs';
  
-import writeFile from  '../utilities/fileHandler.mjs';
-import blocks from '../data/blocks.json'with {  type: 'json'};
+import {writeFile} from  '../utilities/fileHandler.mjs';
+import Chain from '../data/blocks.json'with {  type: 'json'};
 
 let DIFFICULTY_LEVEL = +process.env.INITIAL_DIFFICULTY;
 export default class Blockchain {
@@ -12,11 +12,11 @@ export default class Blockchain {
     // noder  that are connected to the network
     this.networkNodes = [];
     this.nodeUrl =process.argv[3]; //99% url
-    console.log("nodeUrl- ", process.argv[3]);
+    // console.log("nodeUrl- ", process.argv[3]);
     // create genesis(1) block... 
-     this.createBlock(Date.now(), '0000', '0000', [{ "data" : "Genesis Block"}, DIFFICULTY_LEVEL, "nodeUrl- ",this.nodeUrl]);
+     this.createBlock(Date.now(), '0000', '0000', [{ "data" : "Genesis Block"}, DIFFICULTY_LEVEL, "nodeUrl: ",this.nodeUrl]);
      //save to .json
-      //  writeFile('data', 'blocks.json', this.chain);   
+      //  writeFile('data','blocks.json' , this.chain);   
   }
 }
   // Metod för att lägga till ett nytt block i kedjan...
@@ -56,8 +56,7 @@ export default class Blockchain {
      return hash;
     }
 
-  proofOfWork(timestamp, previousBlockHash, data) {
-  //  let DIFFICULTY_LEVEL = INITIAL_DIFFICULTY;
+  proofOfWork(timestamp, previousBlockHash, data) { 
     // calculate hash with nonce from 0 to 2^256 - 1
     let nonce = 0;
     let hash = this.hashBlock(timestamp, previousBlockHash, data, nonce);
@@ -71,9 +70,10 @@ export default class Blockchain {
       hash = this.hashBlock(currentTime, previousBlockHash, data, nonce);
      
     }
-  console.log('nonce,   DIFFICULTY_LEVEL', nonce,   DIFFICULTY_LEVEL);
   
+    console.log('nonce- ',   nonce,  'DIFFICULTY_LEVEL- ',   DIFFICULTY_LEVEL);
     return {nonce,   DIFFICULTY_LEVEL};
+     
   }
 
  changeDifficulty(currentTimestamp ) 
@@ -81,11 +81,10 @@ export default class Blockchain {
     let difficulty = +this.getLastBlock().difficulty;
     const  MINE_RATE = +process.env.MINE_RATE;
     let      timestamp  = this.getLastBlock().timestamp;
-    console.log('difficulty- ', difficulty );
+    
     difficulty = timestamp + MINE_RATE  > currentTimestamp
       ?  difficulty + 1  
       :  difficulty - 1 ; 
-//  console.log('difficulty, ', difficulty );
  
     return difficulty;
  }

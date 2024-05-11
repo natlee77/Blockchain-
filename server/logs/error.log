@@ -829,3 +829,9 @@ Method: GET
                    Time: 16:59:16
                    Success: false - 
                    Message:  can not find URL resurs /api/v1/blockchain/mine
+Method: GET 
+                   Url:  localhost:5011/api/v1/blockchain/  
+                   Date: 2024-05-11 
+                   Time: 14:09:58
+                   Success: undefined - 
+                   Message: Cannot read properties of undefined (reading 'length')

@@ -1,27 +1,37 @@
-import blocks from '../data/blocks.json'with {  type: 'json'};
+import Chain from '../data/blocks.json'with {  type: 'json'};
 import ResponseModel from '../models/ResponseModel.mjs';
-import writeFile from '../utilities/fileHandler.mjs';
+import { addToFile,  writeFile } from '../utilities/fileHandler.mjs';
 import {
   blockchain
 } from '../startup.mjs';
 
 export const getBlockChain = (req, res, next) => {
-  try {
-
+   
+  console.log('Chain', Chain, Chain.chain );
+  
+  if (  Chain.chain === undefined || Chain.chain ===0)
+  { 
+    try {
+      res.status(200).json(new ResponseModel({
+        statusCode: 200,
+        data: blockchain
+      })); 
+      writeFile('data', 'blocks.json', blockchain);
+    } catch (error) {
+      res.status(500).json(new ResponseModel({
+        statusCode: 500,
+        error: 'Internal Server Error '
+      })); 
+    }
+  }else{
     res.status(200).json(new ResponseModel({
       statusCode: 200,
-      data: blockchain//.chain
-    }));
-
-  } catch (error) {
-    res.status(500).json(new ResponseModel({
-      statusCode: 500,
-      error: 'Internal Server Error '
-    }));
+      data: Chain
+    })); 
+   
   }
-  //save to .json
-  //  writeFile('data', 'blocks.json', blockchain );   
-};
+   
+}
 
 export const createBlock = (req, res, next) => {
   try {
@@ -43,6 +53,13 @@ export const createBlock = (req, res, next) => {
       data,
       difficulty
     )
+    console.log('block--------', block);
+    console.log('blockchain  -------', blockchain );
+    
+    
+    //save to .json  
+    Chain.chain.push(block);
+    writeFile('data', 'blocks.json', Chain );   
     res.status(201).json(new ResponseModel({
       statusCode: 200,
       data: block
@@ -55,8 +72,7 @@ export const createBlock = (req, res, next) => {
       error: 'you cannot create block:('
     }));
   }
-  //save to .json  
-  //  writeFile('data', 'blocks.json', blockchain );   
+  
 }; 
 export const getBlock = (req, res, next) => {
   try {
