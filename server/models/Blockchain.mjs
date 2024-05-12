@@ -1,10 +1,9 @@
+import { GENESIS_DATA } from '../utilities/config.mjs';
 import { createHash } from '../utilities/crypto-lib.mjs';
 import Block from './Block.mjs';
- 
-import {writeFile} from  '../utilities/fileHandler.mjs';
-import Chain from '../data/blocks.json'with {  type: 'json'};
 
 let DIFFICULTY_LEVEL = +process.env.INITIAL_DIFFICULTY;
+
 export default class Blockchain {
   constructor() {
     if  (!this.chain) { 
@@ -14,14 +13,12 @@ export default class Blockchain {
     this.nodeUrl =process.argv[3]; //99% url
     // console.log("nodeUrl- ", process.argv[3]);
     // create genesis(1) block... 
-     this.createBlock(Date.now(), '0000', '0000', [{ "data" : "Genesis Block"}, DIFFICULTY_LEVEL, "nodeUrl: ",this.nodeUrl]);
-     //save to .json
-      //  writeFile('data','blocks.json' , this.chain);   
+     this.createBlock(GENESIS_DATA );
   }
 }
-  // Metod för att lägga till ett nytt block i kedjan...
+  // Metod to create block
   createBlock(blockIndex,timestamp, previousBlockHash, currentBlockHash, data, difficulty)   {
-    // Skapa blocket...
+    //______ create block 
     const block = new Block(     
       blockIndex,
       timestamp,
@@ -37,7 +34,7 @@ export default class Blockchain {
   getBlockByIndex(index) {
     return this.chain[index];
   }
-  //return last { } block
+  //return last block
   getLastBlock() {
     return this.chain.at(-1);
   }
@@ -69,7 +66,8 @@ export default class Blockchain {
      
     }
   
-    console.log('nonce- ',   nonce,  'DIFFICULTY_LEVEL- ',   DIFFICULTY_LEVEL);
+    console.log('nonce- ',nonce,
+                'DIFFICULTY_LEVEL- ',DIFFICULTY_LEVEL);
     return {nonce,   DIFFICULTY_LEVEL};
      
   }
@@ -90,7 +88,7 @@ export default class Blockchain {
  validateChain(blockchain) {
   let isValid = true;
 
-  // Gå igenom varje block i kedjan och validera dem.
+  // go trough each block in the chain to validate by hash
   for (let i = 1; i < blockchain.length; i++) {
     const block = blockchain[i];
     console.log(block);

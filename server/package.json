@@ -4,7 +4,8 @@
   "description": "My first blockchain",
   "main": "server.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
     "dev": "nodemon --env-file=config/config.env server.mjs 5010 http://localhost:5010",
     "start": "NODE_ENV=production node--env-file=config/config.env server.mjs ",
     "debug": "ndb server.mjs",

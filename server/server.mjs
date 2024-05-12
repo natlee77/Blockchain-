@@ -13,7 +13,7 @@ const app = express();
 const filename = fileURLToPath(import.meta.url);
 // console.log('_________filename: ', filename);
 const dirname = path.dirname(filename);
-console.log('_________dirname: ', dirname);
+// console.log('_________dirname: ', dirname);
 global.__appdir = dirname;
 
 
