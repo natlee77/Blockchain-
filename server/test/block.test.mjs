@@ -4,11 +4,12 @@ import {
     expect,
     beforeEach
 } from 'vitest';
-import Block from './Block.mjs';
-import Blockchain from './Blockchain.mjs';
+import Block from '../models/Block.mjs';
+import Blockchain from '../models/Blockchain.mjs';
 import {
     GENESIS_DATA,
-    INITIAL_DIFFICULTY
+    INITIAL_DIFFICULTY,
+    MINE_RATE
 } from '../utilities/config.mjs';
 
 
@@ -19,8 +20,9 @@ describe('Blockchain', () => {
     const blockIndex = blockchain.chain.length + 1;
     const timestamp = Date.now();
     const previousBlockHash = 'test57567uyest';
-    const currentBlockHash = ' ';
+    const currentBlockHash =    '0000'
     const data = 'test data';
+    const nonce = 0;
     const difficulty = +INITIAL_DIFFICULTY;
 
 
@@ -87,16 +89,54 @@ describe('Blockchain', () => {
                 expect(block instanceof Block).toBeTruthy();
             })
             it('should start with genesis block', () => {
-                expect(blockchain.chain[0].block ).toEqual(genesisBlock); 
+                expect(blockchain.chain[0]  ).toEqual(genesisBlock); 
                   
             })
             it('should push block to chain', () => {
                 blockchain.chain.push(block);
                 expect(blockchain.chain.length -1 ).toEqual(block.blockIndex);
             })
+         
+        })
+        describe('changeDifficulty() function', () => {
+            it('should change difficulty', () => {                
+                expect( blockchain.changeDifficulty(Date.now())).toEqual(INITIAL_DIFFICULTY -+ 1);  
+            })
+
+        })
+        describe('getLastBlock() function', () => {
+            it('should return last block', () => {
+                expect(blockchain.getLastBlock()).toEqual(block);
+            })
+        }) 
+        describe('getBlockByIndex() function', () => {
+            it('should return en instance of Blockchain class ', () => {       
+                expect( blockchain.getBlockByIndex(1) ).toBeTruthy( );
+            })
+        })
+        
+       
+        describe('hashBlock() function', () => {
+            it('should return hash', () => { 
+                const data = 'Finska pinnar';
+                blockchain.createBlock(data);
+                expect(blockchain.hashBlock(timestamp, previousBlockHash, data, nonce)).not. toEqual(blockchain.getLastBlock().currentBlockHash);
+            })
+        })
+        // describe('proofOfWork() function', () => {            
+        //    const DIFFICULTY_LEVEL =   INITIAL_DIFFICULTY + 1 ;
+        //     it('should return  block nonce and difficulty', () => {
+        //           expect( blockchain.proofOfWork(timestamp, previousBlockHash, data)).toEqual( {nonce:nonce ,   DIFFICULTY_LEVEL: DIFFICULTY_LEVEL}) 
+        //     })
+        // });
+           
+        describe('validateChain() function', () => {
+            it('should return true', () => {
+                expect(blockchain.validateChain(blockchain )).toBe (true);
+            })
         })
 
     })
-})
+ })
 
  

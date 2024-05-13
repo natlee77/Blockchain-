@@ -23,13 +23,14 @@ export const registerNode = (req, res, next) => {
       blockchain.networkNodes.push(node.nodeUrl);
     //syncronize members, send new node/member to all members, 
      syncMembers( node.nodeUrl ); 
-
+      // writeFile('data', 'blocks.json', blockchain.networkNodes);
       res.status(201).json( new ResponseModel({ statusCode: 201, error: `Node  ${node.nodeUrl} are registreted` 
     }));
   
   } else {    
       res.status(400).json( new ResponseModel({ statusCode: 400, error: `Node ${node.nodeUrl} are already blockchain member ` }));     
   }
+
 };
 //syncronize members, send new node/member to all members,  
 const syncMembers = (url) => {
@@ -53,5 +54,6 @@ const syncMembers = (url) => {
   } catch (error) {
     res.status(500).json(new ResponseModel ({ error: "can not sync members", statusCode: 500 }));
   }
+
 };
  
