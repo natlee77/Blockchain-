@@ -2,7 +2,7 @@ import express  from  'express';
 import {   
   getBlockChain,
   createBlock,
-  getBlock,
+   getBlock,
   synchronizeChain,
   updateChain,
 }  from '../controllers/controller.mjs' ;
@@ -11,7 +11,7 @@ const router = express.Router();
 
 router.route('/').get(getBlockChain)
 
-router.route('/:index').get(getBlock) 
+  router.route('/block/:index').get(getBlock) 
 
 router.route('/mine').post(createBlock) 
 

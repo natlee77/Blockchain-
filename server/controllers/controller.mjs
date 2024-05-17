@@ -88,8 +88,9 @@ export const createBlock = (req, res, next) => {
 export const getBlock = (req, res, next) => {
   try {
     const index = parseInt(req.params.index) - 1; //index in Array 
-    if (index >= 0 && index < blockchain.chain.length) {
-      const block = blockchain.getBlockByIndex(index);
+    if (index >= 0 && index < Chain.chain.length) {
+      // const block = Chain.chain.getBlockByIndex(index);
+      const block = Chain.chain[index];
       res.status(200).json(new ResponseModel({
         statusCode: 200,
         data: block

@@ -955,3 +955,15 @@ Method: POST
                    Time: 15:29:06
                    Success: undefined - 
                    Message: Chain is not defined
+Method: GET 
+                   Url:  localhost:5010/api/v1/blockchain/block/10  
+                   Date: 2024-05-17 
+                   Time: 17:22:15
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/blockchain/block/10
+Method: GET 
+                   Url:  localhost:5010/api/v1/blockchain/block/9  
+                   Date: 2024-05-17 
+                   Time: 17:22:29
+                   Success: false - 
+                   Message:  can not find URL resurs /api/v1/blockchain/block/9

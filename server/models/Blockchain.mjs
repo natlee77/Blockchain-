@@ -39,9 +39,9 @@ export default class Blockchain {
     this.chain.push(block);
     return block; 
   }
-  getBlockByIndex(index) {
-    return this.chain[index];
-  }
+  // getBlockByIndex(index) {
+  //   return this.chain[index];
+  // }
   //return last block
   getLastBlock() {
     return this.chain.at(-1);
