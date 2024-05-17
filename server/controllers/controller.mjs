@@ -38,11 +38,9 @@ export const createBlock = (req, res, next) => {
     const timestamp = Date.now();
     const data = req.body; //data in postman
     const lastBlockHash = Chain.chain.at(-1).currentBlockHash;
-    const nonce = blockchain.proofOfWork(
-      timestamp,
+    const {nonce, difficulty} = blockchain.proofOfWork(     
       lastBlockHash,
-      data);
-    const difficulty = blockchain.proofOfWork(timestamp, lastBlockHash, data).DIFFICULTY_LEVEL;
+      data); 
 
     const currentBlockHash = blockchain.hashBlock(
       timestamp, 
@@ -56,6 +54,7 @@ export const createBlock = (req, res, next) => {
       lastBlockHash,
       currentBlockHash,
       data,
+      nonce,
       difficulty
     )
 
@@ -68,10 +67,6 @@ export const createBlock = (req, res, next) => {
         'Content-Type': 'application/json'},
       }); 
     })  
-
-
-    
-    
     //save to .json  
     Chain.chain.push(block);
     writeFile('data', 'blocks.json', Chain );   

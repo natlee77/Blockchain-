@@ -20,7 +20,8 @@ export default class Blockchain {
   // Metod to create block
   createBlock(  timestamp, 
                 previousBlockHash, currentBlockHash, 
-                data,  
+                data, 
+                nonce, 
                 difficulty)   {
     //______ create block 
     const block = new Block( 
@@ -30,6 +31,7 @@ export default class Blockchain {
       previousBlockHash,
       currentBlockHash,
       data,
+      nonce,
       DIFFICULTY_LEVEL
     );
  
@@ -58,20 +60,24 @@ export default class Blockchain {
      return hash;
     }
 
-  proofOfWork(timestamp, previousBlockHash, data) { 
+  proofOfWork(  previousBlockHash, data) { 
     // calculate hash with nonce from 0 to 2^256 - 1
-    let nonce = 0;
-    let hash = this.hashBlock(timestamp, previousBlockHash, data, nonce);
-    let currentTime;
+    let nonce = 0;    
+    let   hash,  currentTime;
+     
      //  while (hash.substring(0,3) !== '000' )    
-  while ( hash.substring(0, DIFFICULTY_LEVEL) !== '0'.repeat(DIFFICULTY_LEVEL) ) 
-  {
+ do  {  
       nonce++;
       currentTime = Date.now();
       DIFFICULTY_LEVEL = this.changeDifficulty(currentTime);
-      hash = this.hashBlock(currentTime, previousBlockHash, data, nonce);
+      hash = this.hashBlock(
+        currentTime, 
+        previousBlockHash, 
+        data, 
+        nonce, 
+        DIFFICULTY_LEVEL);
      
-    }
+    } while ( hash.substring(0, DIFFICULTY_LEVEL) !== '0'.repeat(DIFFICULTY_LEVEL) ) 
   
     console.log('nonce- ',nonce,
                 'DIFFICULTY_LEVEL- ',DIFFICULTY_LEVEL);
