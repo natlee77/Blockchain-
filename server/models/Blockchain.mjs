@@ -32,7 +32,7 @@ export default class Blockchain {
       data,
       DIFFICULTY_LEVEL
     );
-console.log('block - ', block);
+ 
 
     this.chain.push(block);
     return block; 
