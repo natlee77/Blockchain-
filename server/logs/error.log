@@ -901,3 +901,57 @@ Method: POST
                    Time: 15:58:16
                    Success: false - 
                    Message:  can not find URL resurs /api/v1/blockchain/block/broadcast
+Method: POST 
+                   Url:  localhost:4002/api/v1/members/register-node  
+                   Date: 2024-05-17 
+                   Time: 15:15:33
+                   Success: undefined - 
+                   Message: writeFile is not defined
+Method: POST 
+                   Url:  localhost:5011/api/v1/members/register-node  
+                   Date: 2024-05-17 
+                   Time: 15:15:33
+                   Success: undefined - 
+                   Message: writeFile is not defined
+Method: POST 
+                   Url:  localhost:5011/api/v1/members/register-node  
+                   Date: 2024-05-17 
+                   Time: 15:15:33
+                   Success: undefined - 
+                   Message: writeFile is not defined
+Method: POST 
+                   Url:  localhost:4002/api/v1/members/register-node  
+                   Date: 2024-05-17 
+                   Time: 15:15:33
+                   Success: undefined - 
+                   Message: writeFile is not defined
+Method: POST 
+                   Url:  localhost:4001/api/v1/members/register-node  
+                   Date: 2024-05-17 
+                   Time: 15:18:44
+                   Success: undefined - 
+                   Message: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+Method: POST 
+                   Url:  localhost:5011/api/v1/members/register-node  
+                   Date: 2024-05-17 
+                   Time: 15:18:45
+                   Success: undefined - 
+                   Message: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+Method: POST 
+                   Url:  localhost:5011/api/v1/members/register-node  
+                   Date: 2024-05-17 
+                   Time: 15:18:45
+                   Success: undefined - 
+                   Message: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+Method: POST 
+                   Url:  localhost:4001/api/v1/members/register-node  
+                   Date: 2024-05-17 
+                   Time: 15:18:45
+                   Success: undefined - 
+                   Message: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+Method: POST 
+                   Url:  localhost:4001/api/v1/members/register-node  
+                   Date: 2024-05-17 
+                   Time: 15:29:06
+                   Success: undefined - 
+                   Message: Chain is not defined

@@ -1,6 +1,7 @@
 import { GENESIS_DATA } from '../utilities/config.mjs';
 import { createHash } from '../utilities/crypto-lib.mjs';
 import Block from './Block.mjs';
+import Chain from '../data/blocks.json'with {  type: 'json'};
 
 let DIFFICULTY_LEVEL = +process.env.INITIAL_DIFFICULTY;
 
@@ -17,16 +18,21 @@ export default class Blockchain {
   }
 }
   // Metod to create block
-  createBlock(blockIndex,timestamp, previousBlockHash, currentBlockHash, data, difficulty)   {
+  createBlock(  timestamp, 
+                previousBlockHash, currentBlockHash, 
+                data,  
+                difficulty)   {
     //______ create block 
-    const block = new Block(     
-      blockIndex,
-      timestamp,
+    const block = new Block( 
+      // this.chain.length + 1,  
+      Chain.chain.length + 1,
+      timestamp,    
       previousBlockHash,
       currentBlockHash,
       data,
       DIFFICULTY_LEVEL
     );
+console.log('block - ', block);
 
     this.chain.push(block);
     return block; 
@@ -40,12 +46,13 @@ export default class Blockchain {
   }
 //hash 256-bits sized string
 //node have crypto lib  ./utilities/crypto-lib.mjs
-  hashBlock(timestamp, previousBlockHash, currentBlockData, nonce) {
+  hashBlock(timestamp, previousBlockHash, currentBlockData, nonce, difficulty) {
     const stringToHash =
          timestamp.toString() +
          previousBlockHash +
          JSON.stringify(currentBlockData) +
-         nonce;
+         nonce +
+         DIFFICULTY_LEVEL;
     const hash = createHash(stringToHash);
 
      return hash;
@@ -97,7 +104,9 @@ export default class Blockchain {
     const hash = this.hashBlock(
       block.timestamp,
       previousBlock.currentBlockHash,
-      block.data
+      block.data,
+      block.nonce,
+      block.difficulty
     );
 
     if (hash !== block.currentBlockHash) isValid = false;

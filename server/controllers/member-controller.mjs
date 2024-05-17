@@ -1,4 +1,6 @@
 import { blockchain } from '../startup.mjs';
+import Chain from '../data/blocks.json'with {  type: 'json'};
+import { writeFile } from '../utilities/fileHandler.mjs';
  
 import ResponseModel from '../models/ResponseModel.mjs';
 
@@ -16,14 +18,20 @@ export const listMembers = (req, res, next) => {
 export const registerNode = (req, res, next) => {
   // Ta ut ur req.body adressen till servern som vill bli medlem...
   const node = req.body;    
-
+  console.log('blockchain.networkNodes', blockchain.networkNodes );
   if ( blockchain.networkNodes.indexOf(node.nodeUrl) === -1 &&
     blockchain.currentNodeUrl !== node.nodeUrl ) //have already  
   { 
       blockchain.networkNodes.push(node.nodeUrl);
+      //write file to Json
+      Chain.networkNodes.push(node.nodeUrl)  ;
+      writeFile('data', 'blocks.json', Chain );  
+ 
     //syncronize members, send new node/member to all members, 
      syncMembers( node.nodeUrl ); 
-      // writeFile('data', 'blocks.json', blockchain.networkNodes);
+      
+      
+        
       res.status(201).json( new ResponseModel({ statusCode: 201, error: `Node  ${node.nodeUrl} are registreted` 
     }));
   
