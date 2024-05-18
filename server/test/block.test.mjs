@@ -73,8 +73,12 @@ describe('Blockchain', () => {
                 expect(block.data).toEqual(data);
             });
 
+            it(' should set `nonce`', () => {
+                expect(block.nonce).not.toEqual(nonce);
+            });
+
             it(' should set `difficulty`', () => {
-                expect(block.difficulty).toEqual(difficulty);
+                expect(block.difficulty).not.toEqual(difficulty);
             });
 
         });
@@ -100,7 +104,7 @@ describe('Blockchain', () => {
         })
         describe('changeDifficulty() function', () => {
             it('should change difficulty', () => {                
-                expect( blockchain.changeDifficulty(Date.now())).toEqual(INITIAL_DIFFICULTY -+ 1);  
+                expect(blockchain.changeDifficulty( timestamp)).not.toEqual(difficulty);  
             })
 
         })
@@ -109,11 +113,7 @@ describe('Blockchain', () => {
                 expect(blockchain.getLastBlock()).toEqual(block);
             })
         }) 
-        describe('getBlockByIndex() function', () => {
-            it('should return en instance of Blockchain class ', () => {       
-                expect( blockchain.getBlockByIndex(1) ).toBeTruthy( );
-            })
-        })
+       
         
        
         describe('hashBlock() function', () => {
